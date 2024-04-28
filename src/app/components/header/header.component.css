@@ -1,0 +1,16 @@
+.header{
+    border-bottom:solid ;
+    border-color: lightgrey;
+}
+.header-title {    
+    font-family: 'Kaisei Decol'; font-size: 36px;
+}
+.header-img{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: solid;
+    border-color: lightgrey;
+}
+img{
+    width: -webkit-fill-available;
+}
