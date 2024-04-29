@@ -1,17 +1,28 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PlantaComponent } from './planta/planta.component';
 
 describe('AppComponent', () => {
+
+  let httpTestingController: HttpTestingController;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
+        HttpClientTestingModule,
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        PlantaComponent
       ],
     }).compileComponents();
+    httpTestingController = TestBed.inject(HttpTestingController);
   });
 
   it('should create the app', () => {
@@ -30,6 +41,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ParcialMISW4104');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Vivero El Otoño');
   });
 });

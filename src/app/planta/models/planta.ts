@@ -1,5 +1,5 @@
 export class Planta {
-    id: string;
+    id: number;
     nombre_comun: string;
     nombre_cientifico: string;
     tipo: string;
@@ -7,7 +7,7 @@ export class Planta {
     clima:string;
     sustrato_siembra: string
 
- public constructor(id: string, nombre_comun: string, nombre_cientifico: string, tipo:string, altura_maxima:string, clima:string, sustrato_siembra:string ) {
+ public constructor(id: number, nombre_comun: string, nombre_cientifico: string, tipo:string, altura_maxima:string, clima:string, sustrato_siembra:string ) {
    this.id = id;
    this.nombre_comun = nombre_comun;  
    this.nombre_cientifico = nombre_cientifico;
